@@ -38,7 +38,7 @@ public class HelloTraceV1 {
         if(e == null){
             log.info("[{}] {} {}time={}ms",traceId.getId(),status.getMessage(),addSpace(COMPLETE_PREFIX, traceId.getLevel()),resultTimeMs);
         }else{
-            log.info("[{}] {} time={}ms ex={}",traceId.getId(),status.getMessage(),resultTimeMs,e.toString());
+            log.info("[{}] {} {}time={}ms ex={}",traceId.getId(),status.getMessage(),addSpace(EX_PREFIX, traceId.getLevel()),resultTimeMs,e.toString());
         }
     }
 

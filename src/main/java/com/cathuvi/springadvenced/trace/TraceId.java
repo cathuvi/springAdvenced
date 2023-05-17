@@ -12,6 +12,9 @@ public class TraceId {
     }
 
     public TraceId(String id, int level) {
+
+
+
         this.id = id;
         this.level = level;
     }
@@ -25,10 +28,6 @@ public class TraceId {
         return new TraceId(id,level+1);
     }
 
-    public TraceId createPreviousIdId(){
-        return new TraceId(id,level - 1);
-    }
-
     public boolean isFirstLevel(){
         return level ==0;
     }
@@ -39,5 +38,9 @@ public class TraceId {
 
     public int getLevel() {
         return level;
+    }
+
+    public TraceId createPreviousId() {
+        return new TraceId(id,level - 1);
     }
 }
